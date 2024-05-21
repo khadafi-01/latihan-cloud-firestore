@@ -14,3 +14,12 @@ async function store_data() {
     const erosDoc = await doctorsCollections.doc("Dokter Eros");
     console.log("Dokumen atas nama Dokter Eros berhasil dibuat")
 }
+
+// Adding Doctor Eros' personal data
+const profileEros = {
+    nama: "dr. Eros",
+    keahlian: "Dokter Kulit",
+    almamater: " Univeristas A"
+}
+await erosDoc.set(profileEros);
+console.log("Data berhasil ditamabahkan ke dokumen Eros");
