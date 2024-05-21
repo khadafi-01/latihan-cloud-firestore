@@ -23,3 +23,18 @@ const profileEros = {
 }
 await erosDoc.set(profileEros);
 console.log("Data berhasil ditamabahkan ke dokumen Eros");
+
+// Create a subcollection: Consultation 
+const erosSucollections = erosDoc.collection("Konsultasi");
+console.log("Subcollection Konsultasi berhasil dibuat");
+
+// Adding data to patient documents
+const historyConsultations = {
+    nama_pasien: {
+        depan: "Anthony",
+        belakang: "Gunawan",
+    },
+    waktu_konsultasi: Date.now().toString()
+}
+await erosSubcollections.doc("Antony").set(historyConsultations);
+console.log("Data berhasil ditambahkan.");
