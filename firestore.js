@@ -9,4 +9,8 @@ async function store_data() {
     // Membuat Collection root-level
     const doctorsCollections = db.collection('dokter');
     console.log("Collections 'dokter' berhasil dibuat.");
+
+    // Create Doctor Eros documents
+    const erosDoc = await doctorsCollections.doc("Dokter Eros");
+    console.log("Dokumen atas nama Dokter Eros berhasil dibuat")
 }
