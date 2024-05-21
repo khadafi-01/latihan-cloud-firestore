@@ -38,3 +38,5 @@ const historyConsultations = {
 }
 await erosSubcollections.doc("Antony").set(historyConsultations);
 console.log("Data berhasil ditambahkan.");
+
+store_data().catch(console.error)
